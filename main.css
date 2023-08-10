@@ -1,0 +1,255 @@
+body {
+    box-sizing: border-box;
+    background-color: darkgreen;
+}
+
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.label {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    color: white;
+    font-size: 25px;
+}
+
+.game {
+    background-color: #5c8a5e;
+    width: 50%;
+    border-radius: 10px;
+    
+}
+.stand {
+    position: relative;
+    
+}
+
+.line {
+    width: 3px;
+    background-color: #000;
+    height: 200px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    display: none;
+   
+}
+
+.line::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    top: 99%;
+    left: -23px;
+    background-color: #000;
+    display: none;
+
+}
+.line::before {
+    content: "";
+    width: 75px;
+    height: 3px;
+    position: absolute;
+    top: 9%;
+    left: 0px;
+    background-color: #000;
+display: none;
+}
+
+
+.robe {
+    width: 54px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px #000 dashed;
+    position: relative;
+    left: 56%;
+    top: 102px;
+   visibility: hidden;
+}
+
+.robe::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    position: absolute;
+    top: -13px;
+    left: 29px;
+    background-color: #000;
+}
+.man {
+    position: relative;
+    
+}
+
+.head {
+    width: 41px;
+    height: 33px;
+    border-radius: 50%;
+    border: 2px #000 solid;
+    position: absolute;
+    left: 57%;
+    top: 60px;
+   display: none;
+}
+
+.manBody {
+    width: 3px;
+    height: 75px;
+    background-color: #000;
+    position: absolute;
+    top: 96px;
+    left: 406px;
+    display: none;
+}
+
+.hands::before {
+    content: "";
+    width: 2px;
+    height: 36px;
+    background-color: #000;
+    transform: rotate(-30deg);
+    position: absolute;
+    left: -8px;
+    top: 14px;
+
+}
+.hands::after {
+    content: "";
+    width: 2px;
+    height: 36px;
+    background-color: #000;
+    transform: rotate(30deg);
+    position: absolute;
+    left: 10px;
+    top: 14px;
+
+}
+.legs::before {
+    content: "";
+    width: 2px;
+    height: 36px;
+    background-color: #000;
+    transform: rotate(-151deg);
+    position: absolute;
+    left: -9px;
+    top: 72px;
+
+}
+.legs::after {
+    content: "";
+    width: 2px;
+    height: 36px;
+    background-color: #000;
+    transform: rotate(150deg);
+    position: absolute;
+    left: 9px;
+    top: 69px;
+
+}
+.letters {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: fit-content;
+    margin-left: 20px;
+}
+.fineshed {
+    pointer-events: none;
+}
+.letterBox {
+    width: 30px;
+    height: 23px;
+    background-color: #009688;
+    margin: 10px;
+    text-align: center;
+    text-transform: capitalize; 
+}
+.gess {
+display: flex;
+justify-content: center;
+}
+
+.gess span {
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+    border-bottom: black 1px solid;
+    margin: 3px;
+}
+.clicked {
+    background-color: #9E9E9E;
+}
+
+.wrong-1 .line {
+    display: block;
+}
+
+.wrong-2 .line::before {
+    display: block;
+}
+.wrong-3 .line::after {
+    display: block;
+}
+.wrong-4 .robe {
+  visibility: visible;
+}
+
+.wrong-5 .head {
+    display: block;
+}
+.wrong-6 .manBody {
+    display: block;
+}
+
+.popUp {
+    background-color: #5c905c;
+    width: 400px;
+    height: 100px;
+    transform: translate(463px, -205px);
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    font-size: 26px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn {
+    width: 63px;
+    height: 27px;
+    background-color: #70cd70;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+@media  screen and  (max-width:600px) {
+    .draw {
+        align-self: start
+    }
+    .game {
+        width: 100%;
+    height: 740px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    }
+    .popUp {
+        width: 182px;
+    height: 134px;
+    transform: translate(92px, -428px);
+    font-size: 20px;
+    }
+}
